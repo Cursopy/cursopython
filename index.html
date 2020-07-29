@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Curso Python con Google Colab | Ronny Portillo</title>
+    <!-- SEO Meta Tags-->
+    <meta
+      name="description"
+      content="Curso Python con Google Colab | Ronny Portillo"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, programming, consulting, coworking space, services, python, e-commerce, html5, css3, javascript"
+    />
+    <meta name="author" content="Ronny Portillo" />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" href="favicon-32x32.ico" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+    <meta name="msapplication-TileColor" content="#766df4" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector(".cs-page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+    <!-- Vendor Styles-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/simplebar/dist/simplebar.min.css"
+    />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <main class="cs-page-wrapper d-flex flex-column">
+      <!-- Page content-->
+      <div class="row no-gutters d-lg-flex" style="flex: 1 0 auto;">
+        <!-- Left half: Background image + Counter + Footer-->
+        <div
+          class="col-lg-6 d-flex flex-column pt-4 pb-3 px-4 position-relative bg-size-cover"
+          style="
+            flex: 1 0 auto;
+            background-image: url(img/pages/coming-soon/bg-image.jpg);
+          "
+        >
+          <span class="bg-overlay bg-info" style="opacity: 0.9;"></span>
+          <div class="bg-overlay-content text-center mb-4 mb-lg-0">
+            <a class="d-inline-block" href="index.html"
+              ><img width="153" src="img/logo/logo-light.png" alt="Around"
+            /></a>
+          </div>
+          <div
+            class="bg-overlay-content mx-auto my-auto text-center"
+            style="max-width: 500px;"
+          >
+            <h1 class="mb-3 text-light">Próximamente...</h1>
+            <p class="mb-grid-gutter text-light">
+              El curso de Python en español más completo y actualizado hasta la
+              última versión de este poderoso lenguaje de programación estará
+              pronto disponible. <br /><br />
+              <u>Disponible en:</u>
+            </p>
+            <div
+              class="cs-countdown h2 text-light justify-content-center"
+              data-countdown="09/01/2020 07:00:00 PM"
+            >
+              <div class="cs-countdown-days mr-grid-gutter">
+                <span class="cs-countdown-value">0</span
+                ><span class="cs-countdown-label opacity-70 font-size-sm"
+                  >Días</span
+                >
+              </div>
+              <div class="cs-countdown-hours mr-grid-gutter">
+                <span class="cs-countdown-value">0</span
+                ><span class="cs-countdown-label opacity-70 font-size-sm"
+                  >Horas</span
+                >
+              </div>
+              <div class="cs-countdown-minutes mr-grid-gutter">
+                <span class="cs-countdown-value">0</span
+                ><span class="cs-countdown-label opacity-70 font-size-sm"
+                  >Minutos</span
+                >
+              </div>
+              <div class="cs-countdown-seconds">
+                <span class="cs-countdown-value">0</span
+                ><span class="cs-countdown-label opacity-70 font-size-sm"
+                  >Segundos</span
+                >
+              </div>
+            </div>
+            <p class="mb-grid-gutter text-light">
+              <u>Creado y dictado por:</u> <br />
+              <h3> <a href="https://portilloronny6.github.io/website/" target="_blank" rel="noopener noreferrer" style="color: #fff;">Ing. Ronny Portillo</a> </h3>
+            </p>
+            <img src="pythonlogo.svg" alt="Python Logo" style="width: 30%;">
+            <img src="Untitled-2.svg" alt="Curso Logo" style="width: 20%;">
+          </div>
+          <div class="bg-overlay-content text-center py-4 py-lg-0">
+            <a
+              class="nav-link-style nav-link-light mb-2"
+              href="https://wa.me/00584241870756"
+              target="_blank"
+              >+ 58 424 187 07 56</a
+            ><br /><a
+              class="nav-link-style nav-link-light mb-2"
+              href="mailto:cursopython@pm.me"
+              >cursopython@pm.me</a
+            >
+            <div class="pt-4 pb-3">
+              <a class="social-btn sb-light sb-twitter mx-2 mb-2" href="#"
+                ><i class="fe-twitter"></i></a
+              ><a class="social-btn sb-light sb-instagram mx-2 mb-2" href="#"
+                ><i class="fe-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="cs-shape cs-shape-right bg-body d-none d-lg-block">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228.4 2500">
+              <path
+                fill="currentColor"
+                d="M228.4,0v2500H0c134.9-413.7,202.4-830.4,202.4-1250S134.9,413.7,0,0H228.4z"
+              ></path>
+            </svg>
+          </div>
+          <div
+            class="cs-shape cs-shape-bottom cs-shape-curve bg-body d-lg-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
+              <path
+                fill="currentColor"
+                d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <!-- Right half: Notification form-->
+        <div class="col-lg-6 py-5 pb-lg-6 px-4 align-self-center">
+          <div
+            class="mx-auto text-center py-2 py-lg-0 mt-lg-n6"
+            style="max-width: 500px;"
+          >
+            <h2 class="h1 mb-3">Notifícame!</h2>
+            <p class="mb-grid-gutter">
+              Hazme saber cuando el curso este listo para adquirirlo. <br />
+              Aquí te dejo mi correo electrónico:
+            </p>
+            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-ed724024-36bd-4b33-b953-37d8be4a3302"></div>
+
+            <div class="mt-6 pt-4">
+              <img src="python.svg" alt="Curso Python">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll
+      ><span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2"
+        >Top</span
+      ><i class="btn-scroll-top-icon fe-arrow-up"> </i
+    ></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
